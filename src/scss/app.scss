@@ -3,9 +3,15 @@
 @import 'variables';
 @import 'menu';
 
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400);
+@import url(https://fonts.bunny.net/css?family=biryani:200,300,400,600,700,800,900);
+@import url(https://fonts.bunny.net/css?family=signika:300,400,500,600,700);
 
-h1 {
-    color: blue;
+
+//font-family: 'Biryani', sans-serif;
+
+h1, h2 {
+  font-family: 'Abril Fatface', display;
 }
 
 .swiper-container {
@@ -13,60 +19,110 @@ h1 {
     height: 100%; */
     overflow: hidden;
     width: 100%;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+}
 
- 
-  }
-  .swiper-slide > .swiper-slide-cover {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: transparent no-repeat 50% 50% /cover;
+.swiper-container::before {
+  content: '';
+  color: transparent;
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(180deg, #FFFFFF00 64%, rgb(255, 255, 255) 100%);
+  z-index: 5;
+  width: 100%;
+  height: 500px;
+  bottom: 0;
+}
 
-       img {
-      object-fit: contain;
-    }
+.swiper-container::after {
+  content: '';
+  color: transparent;
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(0deg, #FFFFFF00 70%, rgb(255, 255, 255) 100%);
+  z-index: 5;
+  width: 100%;
+  height: 500px;
+  top: 0;
+}
+
+.swiper-text {
+  z-index: 10;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 50%;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Abril Fatface', display;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide > .swiper-slide-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent no-repeat 50% 50% /cover;
+
+      img {
+    object-fit: contain;
   }
-  .swiper-container {
-    //max-width: 800px;
-    height: 100vh;
-  }
-  body {
-    text-align: center;
-  }
-/*   .swiper-slide .slide1 {
-    background-image: url(https://picsum.photos/800/400?image=670);
-    //transform-origin: 0 100%;
-  } */
+}
+
+.swiper-container {
+  //max-width: 800px;
+  height: 100svh;
+}
+
+
+body {
+  text-align: center;
+}
+
+.swiper-scale-effect .swiper-slide-cover {
+  transition: 10s ease-out;
+  transform: scale(1);
+}
+
+.swiper-scale-effect .swiper-slide.swiper-slide-active .swiper-slide-cover {
+  transform: scale(1.2);
+}
+
+.section {
+  max-width: 1200px;
+  margin: 2rem;
+}
+
+.section-blocs {
+  display: flex;
+  flex-direction: row;
+}
+
+.bloc{
+  border-radius: 5px;
+}
+
+.image-bloc {
+  width: 60%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
   
-/*   .swiper-slide .slide2 {
-    background-image: url(https://picsum.photos/800/400?image=837);
-    //transform-origin: 100% 100%;
-  }
-  
-  .swiper-slide .slide3 {
-    background-image: url(https://picsum.photos/800/400?image=947);
-    //transform-origin: 100% 0;
-  }
-  
-  .swiper-slide .slide4 {
-    background-image: url(https://picsum.photos/750/250?image=945);
-    //transform-origin: 0 100%;
-  } */
-  .swiper-scale-effect .swiper-slide-cover {
-    transition: 10s ease-out;
-    transform: scale(1);
-  }
-  
-  .swiper-scale-effect .swiper-slide.swiper-slide-active .swiper-slide-cover {
-    transform: scale(1.2);
-  }
+}
+
+.text-bloc {
+  width: 40%;
+  height: 400px;
+  background-color: #e1cfcf;
+  //transform: scale(1.2);
+}

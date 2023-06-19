@@ -56,3 +56,27 @@ function wpdocs_excerpt_more( $more ) {
 	return '...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+
+/* ADD CUSTOM LOGO */
+function theme_name_logo_setup() {
+    add_theme_support( 'custom-logo', array(
+        'height' => 120,
+        'width' => 150,
+        'flex-width' => true,
+        'header-text' => array('site-title','site-description' )
+    ) );
+ 
+}
+add_action( 'after_setup_theme', 'theme_name_logo_setup' );
+
+
+//Add custom logo in header menu
+add_filter('wp_nav_menu_items','add_new_menu_item', 10, 2);
+function add_new_menu_item( $nav, $args ) {
+    $newmenuitem = "<li class='home-link'>" . get_custom_logo() . "</li>";
+    $nav = $newmenuitem.$nav;
+    return $nav;
+};
+
+

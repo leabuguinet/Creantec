@@ -17,7 +17,8 @@ function theme_register_assets() {
     // IMPORTATION DU JS 
     wp_enqueue_script('app', get_stylesheet_directory_uri(). '/dist/js/app.min.js', null , 1.1, true);
 	//wp_enqueue_script('countup', 'https://cdn.jsdelivr.net/npm/countup.js@2.4.2/dist/countUp.min.js', [], null, false );
-    //wp_enqueue_script('gsap-js', 'https://unpkg.com/gsap@latest/dist/gsap.min.js', [], null, true );
+    wp_enqueue_script('gsap-js', 'https://unpkg.com/gsap@latest/dist/gsap.min.js', [], null, true );
+    wp_enqueue_script('gsap-scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js', [], null, true );
     wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', [], null, false );
 
 

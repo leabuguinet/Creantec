@@ -67,16 +67,71 @@ const homeAnim = {
         
 
         /* Animation of Icons */
+
+        //Chrono Icon
         gsap.utils.toArray(".picto-orange-stroke").forEach(picto => {
-            let hover = gsap.fromTo(".picto-orange-stroke", {x: -50, opacity: 0, duration: 0.05, ease: "power1.inOut", stagger: 0.01}, { opacity:1, x: 0, duration: 0.05, stagger: 0.05});
+            let hoverChrono = gsap.fromTo(".picto-orange-stroke", {x: -50, opacity: 0, duration: 0.08, ease: "power1.inOut", stagger: 0.01}, { opacity:1, x: 0, duration: 0.05, stagger: 0.05});
             
         
-            let test2 = document.querySelector('.picto-chrono');
-            test2.addEventListener("mouseenter", () => hover.play()); 
-            test2.addEventListener("mouseleave", () => hover.reverse());
+            let pictoChrono = document.querySelector('.reactivity');
+            pictoChrono.addEventListener("mouseenter", () => hoverChrono.restart()); 
+            pictoChrono.addEventListener("mouseleave", () => hoverChrono.kill());
         });
-          
-    }
+
+      //Handshake Icon 
+      
+      let pictoHands = document.querySelector('.relation');
+      let hoverHandshake =  gsap.timeline({paused: true, repeat:-1});
+
+      hoverHandshake.to(".picto-hands", {y: -25, duration: 0.6, ease: "ease.out"})
+      .to(".picto-hands", {y: 0, duration: 0.5, ease: "ease.out"})
+      .to(".picto-hands", {y: -10, duration: 0.5, ease: "ease.out"})
+      .to(".picto-hands", {y: 0, duration: 0.3, ease: "ease.out"})
+
+      pictoHands.addEventListener("mouseenter", () => hoverHandshake.play()); 
+
+      pictoHands.addEventListener("mouseleave", () => {
+          hoverHandshake.pause();
+
+          let hoverHandshakeOut =  gsap.timeline({paused: true/* , repeat:-1 */});
+          hoverHandshakeOut.to(".picto-hands", {y: 0, duration: 0.6, ease: "ease.out"})
+          hoverHandshakeOut.play();
+        }); 
+    
+
+        //Lightbulb Icon
+        gsap.utils.toArray(".light-move-rtl").forEach(picto => {
+          let hoverLight = gsap.fromTo(".light-move-rtl", {x: 5, opacity: 0, ease: "power1.inOut", stagger: 0.01}, { opacity:1, x: 0, duration: 0.3, stagger: 0.05});
+
+
+          let pictoLight = document.querySelector('.innovation');
+          pictoLight.addEventListener("mouseenter", () => hoverLight.restart());
+            
+          pictoLight.addEventListener("mouseleave", () => hoverLight.kill());
+        });
+          gsap.utils.toArray(".light-move-ltr").forEach(picto2 => {
+            let hoverLight2 = gsap.fromTo(".light-move-ltr", {x: -5, opacity: 0, ease: "power1.inOut", stagger: 0.01}, { opacity:1, x: 0, duration: 0.3, stagger: 0.05});
+
+            let pictoLight = document.querySelector('.innovation');
+            pictoLight.addEventListener("mouseenter", () => hoverLight2.restart());
+              
+            pictoLight.addEventListener("mouseleave", () => hoverLight2.kill());
+
+          });
+
+          //Pencil Icon 
+
+          let pictoPencil = document.querySelector('.conception');
+          let hoverPencil =  gsap.timeline({paused: true, repeat:0});
+
+      hoverPencil.to(".picto-pencil", {rotate: -360, duration: 0.6, ease: "ease.out"})
+  
+      pictoPencil.addEventListener("mouseenter", () => hoverPencil.restart()); 
+      pictoPencil.addEventListener("mouseleave", () => hoverPencil.kill());
+    
+        
+
+  }
 }
 
 export default homeAnim;

@@ -101,6 +101,7 @@ body {
 .section {
   max-width: 1400px;
   margin: 2rem auto;
+  padding: 0 3rem;
 
   h2 {
     margin-bottom: 3rem;
@@ -142,17 +143,51 @@ body {
 }
 
 
-.picto svg{
-  width: 250px;
-  height: 100px;
-  
-}
 
-.picto-orange {
-  fill: orange;
-}
 
-.picto-orange-stroke {
-  stroke: orange !important;
-}
+.section-assets {
 
+  .picto-list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+
+    .picto svg{
+     // width: 250px;
+      height: 100px;
+      
+    }
+    
+    .picto-orange {
+      fill: orange;
+    }
+    
+    .picto-orange-stroke {
+      stroke: orange !important;
+    }
+  }
+
+
+  .picto-block {
+
+    width: 45%;
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #fff3e2;
+
+    & div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .description {
+      margin-top: 1rem;
+    }
+  }
+
+
+}

@@ -48,7 +48,7 @@ const homeAnim = {
               start: "top 85%",
               //end: "+=400",
               //scrub: true,
-              markers: true, 
+              markers: false, 
               
             }
           });
@@ -65,6 +65,34 @@ const homeAnim = {
         test.addEventListener("mouseenter", () => hover.play());
         test.addEventListener("mouseleave", () => hover.reverse());
         
+
+        /* Animation of Icons card list */
+
+        gsap.utils.toArray(".picto-block").forEach(pictoblock => {
+          let pictoBlocks = gsap.fromTo(".picto-list", {x: -50, opacity: 0, duration: 0.08, ease: "power1.inOut", stagger: 0.01}, { opacity:1, x: 0, duration: 0.05, stagger: 0.05});
+          
+      });
+
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".picto-list",
+          start: "top 60%",
+          //end: "+=400",
+          //scrub: true,
+          markers: true, 
+          
+        }
+      });
+      
+      tl
+      .from(".picto-block", {
+        opacity: 0.8,
+        y: 500,
+        duration: 1,
+        stagger: 0.2,
+        ease: "Power2.easeOut"
+      })
+
 
         /* Animation of Icons */
 

@@ -23,3 +23,13 @@ setTimeout(() => {
 
 ///
 
+
+
+var swiper = new Swiper(".brandSwiper", {
+  slidesPerView: 6,
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

@@ -6,27 +6,26 @@ const homeAnim = {
 
     init () {
 
-        /* Animation of blocks */
+        /* Animation of Who are we section blocks */
         var tl = gsap.timeline({
             scrollTrigger: {
-              trigger: ".image-block",
+              trigger: ".section-whoarewe",
               start: "top 90%",
               //end: "+=400",
               scrub: true,
               markers: false, 
-              
             }
           });
           
           tl
-          .from(".image-block", {
+          .from(".section-whoarewe .whoareweImgAnim", {
             opacity: 0.8,
             scale: 0.7,
           })
           
           var tl = gsap.timeline({
             scrollTrigger: {
-              trigger: ".section-services",
+              trigger: ".section-whoarewe",
               start: "top 85%",
               //end: "+=400",
               //scrub: true,
@@ -36,7 +35,7 @@ const homeAnim = {
           });
           
           tl
-          .from(".test", {
+          .from(".section-whoarewe .section-title", {
             opacity: 0.8,
             y: 500,
           })
@@ -44,7 +43,7 @@ const homeAnim = {
           
           var tl = gsap.timeline({
             scrollTrigger: {
-              trigger: ".section-services",
+              trigger: ".section-whoarewe",
               start: "top 85%",
               //end: "+=400",
               //scrub: true,
@@ -53,17 +52,17 @@ const homeAnim = {
             }
           });
           tl
-          .fromTo(".text-block", {
+          .fromTo(".section-whoarewe .text-block", {
             y: 500,
             duration: 1.5,
           }, {
             y: 0,
           })
 
-        let test = document.querySelector('.text-block');
-        let hover = gsap.to(test, {scale: 1.12, duration: 0.3, paused: true, ease: "power1.inOut"});
-        test.addEventListener("mouseenter", () => hover.play());
-        test.addEventListener("mouseleave", () => hover.reverse());
+        let textBlock = document.querySelector('.section-whoarewe .text-block');
+        let hoverTextBlock = gsap.to(textBlock, {scale: 1.12, duration: 0.3, paused: true, ease: "power1.inOut"});
+        textBlock.addEventListener("mouseenter", () => hoverTextBlock.play());
+        textBlock.addEventListener("mouseleave", () => hoverTextBlock.reverse());
         
 
         /* Animation of Icons card list */
@@ -79,7 +78,7 @@ const homeAnim = {
           start: "top 60%",
           //end: "+=400",
           //scrub: true,
-          markers: true, 
+          markers: false, 
           
         }
       });
@@ -158,6 +157,64 @@ const homeAnim = {
       pictoPencil.addEventListener("mouseleave", () => hoverPencil.kill());
     
         
+
+      /* Animation of Services section blocks */
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section-services",
+          start: "top 90%",
+          //end: "+=400",
+          scrub: true,
+          markers: true, 
+        }
+      });
+      
+      tl
+      .from(".servicesImgAnim", {
+        opacity: 0.8,
+        scale: 0.7,
+      })
+      
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section-services",
+          start: "top 85%",
+          //end: "+=400",
+          //scrub: true,
+          markers: false, 
+          
+        }
+      });
+      
+      tl
+      .from(".section-services .section-title", {
+        opacity: 0.8,
+        y: 500,
+      })
+      
+      
+      var tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".section-services",
+          start: "top 85%",
+          //end: "+=400",
+          //scrub: true,
+          markers: false, 
+          
+        }
+      });
+      tl
+      .fromTo(".section-services .text-block", {
+        y: 500,
+        duration: 1.5,
+      }, {
+        y: 0,
+      })
+
+    let textBlock2 = document.querySelector('.section-services .text-block');
+    let hoverTextBlock2 = gsap.to(textBlock2, {scale: 1.12, duration: 0.3, paused: true, ease: "power1.inOut"});
+    textBlock2.addEventListener("mouseenter", () => hoverTextBlock2.play());
+    textBlock2.addEventListener("mouseleave", () => hoverTextBlock2.reverse());
 
   }
 }

@@ -1,8 +1,9 @@
 
-
+import menuAnim from "./menu-anim";
 import homeAnim from "./home-anim";
 
 homeAnim.init();
+menuAnim.init();
 
 ///SWIPER
 var swiper = new Swiper('.swiper-container', {
@@ -27,6 +28,7 @@ setTimeout(() => {
 
 var swiper = new Swiper(".brandSwiper", {
   slidesPerView: 6,
+  loop: true,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",

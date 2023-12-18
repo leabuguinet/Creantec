@@ -21,6 +21,7 @@ const homeAnim = {
           .from(".section-whoarewe .whoareweImgAnim", {
             opacity: 0.8,
             scale: 0.7,
+            duration: 1,
           })
           
           var tl = gsap.timeline({
@@ -37,7 +38,8 @@ const homeAnim = {
           tl
           .from(".section-whoarewe .section-title", {
             opacity: 0.8,
-            y: 500,
+            y: 50,
+            duration: 1.2,
           })
           
           
@@ -54,7 +56,7 @@ const homeAnim = {
           tl
           .fromTo(".section-whoarewe .text-block", {
             y: 500,
-            duration: 1.5,
+            duration: 1.8,
           }, {
             y: 0,
           })
@@ -165,13 +167,13 @@ const homeAnim = {
           start: "top 90%",
           //end: "+=400",
           scrub: true,
-          markers: true, 
+          markers: false, 
         }
       });
       
       tl
       .from(".servicesImgAnim", {
-        opacity: 0.8,
+        opacity: 0.8,  
         scale: 0.7,
       })
       
@@ -220,3 +222,4 @@ const homeAnim = {
 }
 
 export default homeAnim;
+

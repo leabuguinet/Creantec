@@ -177,8 +177,62 @@
     border-radius: 20px;
     border: none;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: absolute;
     font-family: 'Abril Fatface', display;
+    bottom: 50px;
   }
-}
+
+
+  .service2 {
+ background-color: #e1eef6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+
+    .item {
+      width: calc(80% / 2 - 20px);
+      position: relative;
+      margin-bottom: 5rem;
+      transition: all 1s ease;
+      cursor: pointer;
+
+      &:hover {
+        .card {
+          transform: scale(1.05);
+          
+        }
+      }
+    }
+
+    button {
+      background-color: #01465b;;
+      border: none;
+      padding: 0.3rem 1rem;
+      border-radius: 5px;
+      font-family: 'Abril Fatface', display;
+      //font-family: "Roboto",sans-serif;
+      
+      font-family: 'Akshar', sans-serif;
+      font-size: 1.8rem;
+      position: absolute;
+      bottom: -15px;
+      left: -15px;
+      cursor: pointer;
+      color: white;
+
+    }
+
+    .card {
+      width: 100%;
+      height: 300px;
+      //background-image: url(/wp-content/themes/creantec/src/vitrine.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      transition: all 1s ease;
+      box-shadow: #ffffff 10px -10px;
+    }
+  }
+} 

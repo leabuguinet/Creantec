@@ -167,13 +167,30 @@ $sectionRefs = get_field('refsSection');
   </div>
 
 
-  <div class="service">
+<!--   <div class="service">
   <div class="mask1">
 <img src="/wp-content/themes/creantec/src/img_5terre.jpeg" alt="Cinque Terre" width="600" height="400">
 </div>
-<button class="buttontest">Vitrine</button>
-</div>
+<button class="buttontest">Artisanat du luxe</button>
+</div> -->
 
+
+<div class="service2">
+
+  <?php 
+
+  for($i = 1 ; $i < 7; $i++): ?>
+    
+    <?php $service = get_field('service_' . $i); ?>
+
+  <div class="item">
+      <div class="card" style="background-image: url(<?php echo $service['image'] ?>);"></div>
+      <button class=""><?php echo $service['name'] ?></button>
+  </div>
+
+  <?php endfor ?>
+
+</div>
 
 </main>
 

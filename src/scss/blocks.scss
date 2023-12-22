@@ -6,7 +6,7 @@
   }
   
   .block{
-    border-radius: 5px;
+    border-radius: 10px;
   }
   
   .image-block {
@@ -30,11 +30,11 @@
     transform-origin : top right;
     padding: 2rem;
 
-    h3 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-        font-family: "Abril Fatface",display;
-    }
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    //font-family: "Abril Fatface",display;
+  }
 }
 
 .section-blocks.type2 {

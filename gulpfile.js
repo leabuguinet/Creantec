@@ -77,8 +77,6 @@ const buildJS = cb => {
   }));
 }
 
-
-
 // Sass Watch
 const watchSass = cb => {
   browserSync.init({
@@ -121,10 +119,12 @@ gulp.task('watchAll', function() {
   browserSync.init({
     proxy : siteProxy
   });
-  gulp.watch([path.join(srcSassPath, 'app.scss')], gulp.series(buildSass));
-  gulp.watch([path.join(srcJsPath, 'app.js')], gulp.series(buildJS));
-  // gulp.watch([path.join(srcJsPath, '**/*.js')]).on('change', browserSync.reload);
-  // gulp.watch([path.join(basePath, '**/*.php'), path.join(basePath, '**/*.html')]).on('change', browserSync.reload );
+  gulp.watch([path.join(srcSassPath, '**/*.scss')], gulp.series(buildSass));
+  gulp.watch([path.join(srcJsPath, '**/*.js')], gulp.series(buildJS));
+  gulp.watch([path.join(srcSassPath, '**/*.scss')]).on('change', browserSync.reload );
+  gulp.watch([path.join(srcJsPath, '**/*.js')]).on('change', browserSync.reload );
+
+  gulp.watch([path.join(basePath, '**/*.php'), path.join(basePath, '**/*.html')]).on('change', browserSync.reload );
 });
 
 

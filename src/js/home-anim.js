@@ -13,7 +13,7 @@ const homeAnim = {
               start: "top 90%",
               //end: "+=400",
               scrub: true,
-              markers: false, 
+              markers: true, 
             }
           });
           
@@ -163,7 +163,7 @@ const homeAnim = {
       /* Animation of Services section blocks */
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".section-services",
+          trigger: ".section-blocks.type2",
           start: "top 90%",
           //end: "+=400",
           scrub: true,
@@ -179,7 +179,7 @@ const homeAnim = {
       
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".section-services",
+          trigger: ".section-blocks.type2",
           start: "top 85%",
           //end: "+=400",
           //scrub: true,
@@ -189,7 +189,7 @@ const homeAnim = {
       });
       
       tl
-      .from(".section-services .section-title", {
+      .from(".section-blocks.type2", {
         opacity: 0.8,
         y: 500,
       })
@@ -197,7 +197,7 @@ const homeAnim = {
       
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".section-services",
+          trigger: ".section-blocks.type2",
           start: "top 85%",
           //end: "+=400",
           //scrub: true,
@@ -206,20 +206,21 @@ const homeAnim = {
         }
       });
       tl
-      .fromTo(".section-services .text-block", {
+      .fromTo(".type2 .text-block", {
         y: 500,
         duration: 1.5,
       }, {
         y: 0,
       })
 
-    let textBlock2 = document.querySelector('.section-services .text-block');
-    let hoverTextBlock2 = gsap.to(textBlock2, {scale: 1.12, duration: 0.3, paused: true, ease: "power1.inOut"});
+    let textBlock2 = document.querySelector('.type2 .text-block');
+    //let hoverTextBlock2 = gsap.to(textBlock2, {scale: 1.1, duration: 0.3, paused: true, ease: "power1.inOut"});
     textBlock2.addEventListener("mouseenter", () => hoverTextBlock2.play());
     textBlock2.addEventListener("mouseleave", () => hoverTextBlock2.reverse());
 
   }
 }
+
 
 export default homeAnim;
 

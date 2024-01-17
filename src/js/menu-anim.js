@@ -15,7 +15,7 @@ const menuAnim = {
             endTrigger: 'body',
             end: "bottom bottom+10" ,   
             scrub: false,
-            markers: true, 
+            markers: false, 
             //pin: true,
             toggleClass: {targets: ".menu-menu-main-container", className: "menu-fixed"}
             }

@@ -1,4 +1,4 @@
-
+@import "variables";
 
 /* Colours */
 
@@ -12,11 +12,12 @@ $darkgrey: #282f35;
 
 h1, h2 {
     font-family: 'Abril Fatface', display;
-    
+    font-size: clampRem(35, 70, $bp-mobile, $bp-regular);
 }
 
 h3 {
     font-family: 'Akshar', sans-serif;
+    font-size: clampRem(25, 35, $bp-mobile, $bp-regular);
 }
 
 *, html, body {
@@ -36,10 +37,7 @@ body {
     flex-direction: column;
     position: relative;
     font-family: 'Roboto', sans-serif;
-    font-size: toRem(14);
     scrollbar-gutter: auto;
     scroll-behavior: smooth;
     color: $darkgrey;
 }
-
-

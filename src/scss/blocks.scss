@@ -4,7 +4,38 @@
     justify-content: center;
     align-items: center;
   }
-  
+
+  button {
+    position: absolute;
+    padding: 1rem 1.8rem;
+    border: none;
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.18);
+    background-color: $pearl;
+    color: $darkgrey;
+    //font-size: 1.5rem;
+    font-size: clampRem(17, 20, $bp-mobile, $bp-regular);
+    font-family: "Abril Fatface",display;
+    cursor: pointer;
+    //width: 70%;
+    //max-width: 50px;
+
+    bottom: 20px;
+    left: 45%;
+
+    &:hover { 
+      animation: 2s ease bounceButton both infinite;
+    }
+
+    @keyframes bounceButton {
+        0% { transform: translateY(5px); }
+        50%   { transform: translateY(0px); }
+        100%   { transform: translateY(5px); }
+      }
+
+    
+}
+
   .block{
     border-radius: 10px;
   }
@@ -31,7 +62,7 @@
     padding: 2rem;
 
   h3 {
-    font-size: 2rem;
+    //font-size: 2rem;
     margin-bottom: 1rem;
     //font-family: "Abril Fatface",display;
   }
@@ -66,12 +97,14 @@
         border-radius: 50px 50px 50px 50px;
         box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.18);
         background-color: $orange;
-        font-size: 1.5rem;
+        //font-size: 1.5rem;
+        font-size: clampRem(17, 25, $bp-mobile, $bp-regular);
         font-family: "Abril Fatface",display;
         cursor: pointer;
         width: 50%;
         //max-width: 50px;
         left: 25%;
+        bottom: unset;
 
         &:hover { 
           animation: 2s ease bounceButton both infinite;

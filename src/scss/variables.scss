@@ -1,47 +1,54 @@
 
+@use 'sass:math';
 
 // Paths
 $pathToPng : '../../dist/img/png/';
 $pathToSvg : '../../dist/img/svg/';
-$pathToJpg : '../../dist/img/jpg/';
+$pathToImg : '../../dist/img/';
 $pathToFont : '../../dist/font/';
 
 // Colors
-
-
+//$specificSize: #6B25FF;
 
 // Transitions
 $smooth : all .2s ease-in-out;
 
 // Breakpoints
-$bp-extralarge: 1920px;
-$bp-large: 1440px;
-$bp-regular: 1280px;
-$bp-small: 1024px;
-$bp-tablet: 768px;
-$bp-mobile: 375px;
-$bp-s-mobile: 320px;
+$bp-extralarge-px: 1920px;
+$bp-large-px: 1440px;
+$bp-regular-px: 1280px;
+$bp-small-px: 1024px;
+$bp-tablet-px: 768px;
+$bp-mobile-px: 375px;
+$bp-s-mobile-px: 320px;
 
+$bp-extralarge: 1920;
+$bp-large: 1440;
+$bp-regular: 1280;
+$bp-small: 1024;
+$bp-tablet: 768;
+$bp-mobile: 375;
+$bp-s-mobile: 320;
 
 //Functions
 
-///Adapt font-size according to the screen width and convert it to rem
-@function font-clamp($minFontSizepx, $maxFontSizepx, $minWidthPx, $maxWidthPx) {
+///Adapt size according to the screen width and convert it to rem
+@function clampRem($minSizePx, $maxSizePx, $minWidthPx, $maxWidthPx) {
 
     $pixelsPerRem : 16;
     $minWidth : math.div($minWidthPx, $pixelsPerRem);
     $maxWidth : math.div($maxWidthPx, $pixelsPerRem);
 
-    $minFontSize : math.div($minFontSizepx, 16);
-    $maxFontSize : math.div($maxFontSizepx, 16);
+    $minSize : math.div($minSizePx, 16);
+    $maxSize : math.div($maxSizePx, 16);
 
-    $slope :  math.div($maxFontSize - $minFontSize, $maxWidth - $minWidth);
+    $slope :  math.div($maxSize - $minSize, $maxWidth - $minWidth);
 
-    $yAxisIntersection : - $minWidth * $slope + $minFontSize;
+    $yAxisIntersection : - $minWidth * $slope + $minSize;
 
     $slopecal : ($slope * 100);
 
-    $result : clamp(#{$minFontSize}rem, #{$yAxisIntersection}rem + #{$slopecal}vw, #{$maxFontSize}rem);
+    $result : clamp(#{$minSize}rem, #{$yAxisIntersection}rem + #{$slopecal}vw, #{$maxSize}rem);
 
     @return $result;
 

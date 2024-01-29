@@ -808,8 +808,8 @@
         },
         {
             "key": "field_6490770dffd06",
-            "label": "Section Services",
-            "name": "servicesSection",
+            "label": "Section Contact",
+            "name": "contactSection",
             "aria-label": "",
             "type": "group",
             "instructions": "",
@@ -823,34 +823,9 @@
             "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_64907728ffd07",
-                    "label": "Image",
-                    "name": "servicesImg",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium"
-                },
-                {
                     "key": "field_64907744ffd08",
                     "label": "Titre",
-                    "name": "servicesTitle",
+                    "name": "contactTitle",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -870,7 +845,7 @@
                 {
                     "key": "field_64a2981a7bc30",
                     "label": "Titre secondaire",
-                    "name": "servicesTitle2",
+                    "name": "contactTitle2",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -890,7 +865,7 @@
                 {
                     "key": "field_64907754ffd09",
                     "label": "Texte",
-                    "name": "servicesText",
+                    "name": "contactText",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -1071,5 +1046,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705508325
+    "modified": 1705578817
 }

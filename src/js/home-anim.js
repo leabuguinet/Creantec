@@ -6,6 +6,16 @@ const homeAnim = {
 
     init () {
 
+      var tl = gsap.timeline({
+
+      });
+      tl
+      .from(".swiper-text", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+      })
+
         /* Animation of Who are we section blocks */
         var tl = gsap.timeline({
             scrollTrigger: {
@@ -13,7 +23,7 @@ const homeAnim = {
               start: "top 90%",
               //end: "+=400",
               scrub: true,
-              markers: true, 
+              markers: false, 
             }
           });
           
@@ -161,25 +171,10 @@ const homeAnim = {
         
 
       /* Animation of Services section blocks */
-      var tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".section-blocks.type2",
-          start: "top 90%",
-          //end: "+=400",
-          scrub: true,
-          markers: false, 
-        }
-      });
-      
-      tl
-      .from(".servicesImgAnim", {
-        opacity: 0.8,  
-        scale: 0.7,
-      })
       
       var tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".section-blocks.type2",
+          trigger: ".section-contact",
           start: "top 85%",
           //end: "+=400",
           //scrub: true,
@@ -188,7 +183,7 @@ const homeAnim = {
         }
       });
       
-      tl
+/*       tl
       .from(".section-blocks.type2", {
         opacity: 0.8,
         y: 500,
@@ -204,7 +199,7 @@ const homeAnim = {
           markers: false, 
           
         }
-      });
+      }); */
       tl
       .fromTo(".type2 .text-block", {
         y: 500,

@@ -31,42 +31,66 @@ footer {
 
 
         //col-left
-        .rs-list {
-            display: flex;
-            gap: 30px;
-            margin-top: 30px;
 
-            img {
-                width: 70px;
+        .col-left {
+
+            h3 {
+                font-family: 'Abril Fatface', display;
+                font-size: clampRem(17, 60, $bp-mobile, $bp-regular);
+                line-height: 0.7;
+            }
+
+            .rs-list {
+                display: flex;
+                gap: 30px;
+                margin-top: 30px;
+    
+                img {
+                    width: 70px;
+                }
             }
         }
 
-        .links {
-            display: flex;
-            gap: 50px;
+        //col right
+
+        .col-right {
+            .links {
+                display: flex;
+                gap: 50px;
+            }
+    
+            ul li {
+                list-style: none;
+            }
+    
+            a {
+                font-family: 'Akshar', sans-serif;
+                font-size: clampRem(25, 25, $bp-mobile, $bp-regular);
+                text-decoration: none;
+                color:  #000000;
+                position: relative;
+            }
+
+            li span {
+                opacity: 0;
+                transition: 700ms ease all;
+                text-shadow: none;
+                @include max($bp-small-px){
+                  opacity: 1;
+                }
+              }
+              
+            li:hover span {
+            opacity: 1;
+            text-shadow: none;
+            }
+              
+            img{
+                width: 200px;
+                margin-bottom: 1rem;
+            }
         }
 
-        ul li {
-            list-style: none;
-        }
-
-        a {
-            font-family: 'Akshar', sans-serif;
-            font-size: 1.5rem;
-            text-decoration: none;
-            color:  #000000;
-        }
-
-        h3 {
-            font-family: 'Abril Fatface', display;
-            font-size: 3.5rem;
-            line-height: 0.7;
-        }
-
-        img{
-            width: 200px;
-            margin-bottom: 1rem;
-        }
     }
 }
 

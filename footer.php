@@ -21,17 +21,17 @@
 
         <div class="links">
             <ul>
-                <li><a href="">Artisanat du luxe</a></li>
-                <li><a href="">Visibilité sur mesure</a></li>
-                <li><a href="">Vitrines</a></li>
-                <li><a href="">PLV Glorifier</a></li>
-                <li><a href="">Espaces nuit</a></li>
-                <li><a href="">Théâtralisation</a></li>
+                <li><a href=""><span>• </span>Artisanat du luxe</a></li>
+                <li><a href=""><span>• </span>Visibilité sur mesure</a></li>
+                <li><a href=""><span>• </span>Vitrines</a></li>
+                <li><a href=""><span>• </span>PLV Glorifier</a></li>
+                <li><a href=""><span>• </span>Espaces nuit</a></li>
+                <li><a href=""><span>• </span>Théâtralisation</a></li>
             </ul>
             <ul>
-                <li><a href="">Notre histoire</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Mentions Légales</a></li>
+                <li><a href=""><span>• </span>Notre histoire</a></li>
+                <li><a href=""><span>• </span>Contact</a></li>
+                <li><a href=""><span>• </span>Mentions Légales</a></li>
             </ul>
         </div>
 

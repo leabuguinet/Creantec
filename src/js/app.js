@@ -26,9 +26,14 @@ setTimeout(() => {
 
 
 
-var swiper = new Swiper(".brandSwiper", {
+var swiper2 = new Swiper(".brandSwiper", {
   slidesPerView: 6,
   loop: true,
+  //speed: 100,
+  autoplay: {
+    delay: 1500,
+    waitForTransition: true,
+  },
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",

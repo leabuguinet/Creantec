@@ -7,7 +7,7 @@ global $post;
 $slider = get_field('slider');
 
 $sectionWhoarewe = get_field('whoareweSection');
-$sectionServices = get_field('servicesSection');
+$sectionContact = get_field('contactSection');
 $sectionAssets = get_field('assetsSection');
 $sectionRefs = get_field('refsSection');
 $sectionProjects = get_field('projectsSection');
@@ -53,6 +53,7 @@ $sectionProjects = get_field('projectsSection');
         <div class="block text-block">
           <h3><?php echo $sectionWhoarewe['whoareweTitle2'] ?></h3>
           <p><?php echo $sectionWhoarewe['whoareweText'] ?></p>
+          <button>En savoir plus</button>
         </div>
       </div>
     </div>
@@ -245,12 +246,12 @@ $sectionProjects = get_field('projectsSection');
 
   <div class="section section-contact">
     <div class="content">
-          <h2>Nous contacter</h2>
+          <h2><?php echo $sectionContact['contactTitle'] ?></h2>
       <div class="section-blocks type2">
         <!-- <div class="block servicesImgAnim image-block" style="background-image: url(<?php echo $sectionServices['servicesImg'] ?>);"></div> -->
         <div class="block text-block">
-          <h3><?php echo $sectionServices['servicesTitle2'] ?></h3>
-          <p><?php echo $sectionServices['servicesText'] ?></p>
+          <h3><?php echo $sectionContact['contactTitle2'] ?></h3>
+          <p><?php echo $sectionContact['contactText'] ?></p>
           <button>Contactez-nous</button>
         </div>
       </div>

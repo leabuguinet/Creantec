@@ -3,6 +3,26 @@
     "title": "Services",
     "fields": [
         {
+            "key": "field_65d5c67439b09",
+            "label": "Section services titre",
+            "name": "servicestitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65859f8eb3482",
             "label": "service 1",
             "name": "service_1",
@@ -573,5 +593,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1703264031
+    "modified": 1708508821
 }

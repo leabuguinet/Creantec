@@ -11,6 +11,7 @@ $sectionContact = get_field('contactSection');
 $sectionAssets = get_field('assetsSection');
 $sectionRefs = get_field('refsSection');
 $sectionProjects = get_field('projectsSection');
+$sectionServices = get_field('servicestitle')
 ?>
 
 <main class="" id="homepage">
@@ -44,19 +45,45 @@ $sectionProjects = get_field('projectsSection');
     </div>
   </div>
 
-  <div class="section section-whoarewe">
-    <div class="content">
-      <h2 class="section-title"><?php echo $sectionWhoarewe['whoareweTitle'] ?></h2>
 
-      <div class="section-blocks">
-        <div class="block image-block whoareweImgAnim" style="background-image: url(<?php echo $sectionWhoarewe['whoareweImg'] ?>);"></div>
-        <div class="block text-block">
-          <h3><?php echo $sectionWhoarewe['whoareweTitle2'] ?></h3>
-          <p><?php echo $sectionWhoarewe['whoareweText'] ?></p>
-          <button>En savoir plus</button>
-        </div>
-      </div>
+
+  <!-- <section class="col-3 ss-style-invertedrounded">
+    <div class="column">
     </div>
+    <div class="column">
+    </div>
+    <div class="column">
+    </div>
+  </section> -->
+
+  <div class="section section-services">
+    <div class="content">
+      <h2 class="section-title"><?php echo $sectionServices ?></h2>
+      <div class="services-list">
+
+        <?php
+
+        for ($i = 1; $i < 7; $i++) : ?>
+
+          <?php $service = get_field('service_' . $i); ?>
+
+          <div class="item">
+            <div class="card" style="background-image: url(<?php echo $service['image'] ?>);"></div>
+            <button class=""><?php echo $service['name'] ?></button>
+          </div>
+
+        <?php endfor ?>
+
+      </div>
+
+
+    </div>
+
+
+<!--     <section class="col-2 color ss-style-roundedsplit">
+      <div class="column text">
+      </div>
+    </section> -->
 
   </div>
 
@@ -199,49 +226,23 @@ $sectionProjects = get_field('projectsSection');
     </div>
   </div>
 
+  <div class="section section-projects">
+      <div class="content projects-list">
 
+        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg1'] ?>);"></div>
+        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg2'] ?>);"></div>
+        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg3'] ?>);"></div>
+        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg4'] ?>);"></div>
+        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg5'] ?>);"></div>
 
-
-
-  <section class="col-3 ss-style-invertedrounded">
-    <div class="column">
-    </div>
-    <div class="column">
-    </div>
-    <div class="column">
-    </div>
-  </section>
-
-  <div class="section section-services">
-    <div class="content">
-      <h2 class="section-title"><?php echo $sectionServices['servicesTitle'] ?></h2>
-      <div class="services-list">
-
-        <?php
-
-        for ($i = 1; $i < 7; $i++) : ?>
-
-          <?php $service = get_field('service_' . $i); ?>
-
-          <div class="item">
-            <div class="card" style="background-image: url(<?php echo $service['image'] ?>);"></div>
-            <button class=""><?php echo $service['name'] ?></button>
-          </div>
-
-        <?php endfor ?>
 
       </div>
-
-
-    </div>
-
-
-    <section class="col-2 color ss-style-roundedsplit">
-      <div class="column text">
-      </div>
-    </section>
 
   </div>
+
+
+
+
 
 
   <div class="section section-contact">
@@ -259,19 +260,23 @@ $sectionProjects = get_field('projectsSection');
     </div>
   </div>
 
-  <div class="section section-projects">
-      <div class="content projects-list">
+  <div class="section section-whoarewe">
+    <div class="content">
+      <h2 class="section-title"><?php echo $sectionWhoarewe['whoareweTitle'] ?></h2>
 
-        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg1'] ?>);"></div>
-        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg2'] ?>);"></div>
-        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg3'] ?>);"></div>
-        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg4'] ?>);"></div>
-        <div class="project-square" style="background-image: url(<?php echo $sectionProjects['projectImg5'] ?>);"></div>
-
-
+      <div class="section-blocks">
+        <div class="block image-block whoareweImgAnim" style="background-image: url(<?php echo $sectionWhoarewe['whoareweImg'] ?>);"></div>
+        <div class="block text-block">
+          <h3><?php echo $sectionWhoarewe['whoareweTitle2'] ?></h3>
+          <p><?php echo $sectionWhoarewe['whoareweText'] ?></p>
+          <button>En savoir plus</button>
+        </div>
       </div>
+    </div>
 
   </div>
+
+
 
 
 

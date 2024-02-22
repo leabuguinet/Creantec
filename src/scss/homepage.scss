@@ -229,9 +229,8 @@
       box-shadow: $orange 10px -10px;
     }
   }
-}
 
-section::before,
+  section::before,
 section::after {
   position: absolute;
   content: "";
@@ -339,3 +338,5 @@ section {
   }
 
 }
+}
+

@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 
 const homeAnim = {
 
+
     init () {
 
       var tl = gsap.timeline({

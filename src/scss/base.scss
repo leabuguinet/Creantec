@@ -2,7 +2,9 @@
 
 /* Colours */
 
+//$orange: #F48334;
 $orange: #F48334;
+$orangeO: #f48434b7;
 //$lightgreyblue : #e1eef6;
 $orangebis: #ff5f2e;
 $yellow: #fcbe32;
@@ -11,12 +13,14 @@ $pearl: #F6F0E4;
 $darkgrey: #282f35;
 
 h1, h2 {
-    font-family: 'Abril Fatface', display;
+    //font-family: 'Abril Fatface', display;
+    font-family: 'Playfair Display', display;
+    font-weight: 700;
     font-size: clampRem(35, 70, $bp-mobile, $bp-regular);
 }
 
 h3 {
-    font-family: 'Akshar', sans-serif;
+    font-family: 'Playfair Display', display;
     font-size: clampRem(25, 35, $bp-mobile, $bp-regular);
 }
 
@@ -36,7 +40,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3rem;
     scrollbar-gutter: auto;
     scroll-behavior: smooth;
     color: $darkgrey;

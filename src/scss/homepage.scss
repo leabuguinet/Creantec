@@ -44,7 +44,7 @@
       bottom: 50%;
       color: #ffffff;
       font-size: clampRem(35, 70, $bp-mobile, $bp-regular);
-      font-family: "Abril Fatface", display;
+      font-family: "Playfair Display", display;
       text-align: center;
     }
 
@@ -169,6 +169,82 @@
   }
 
   /* SECTION SERVICES */
+
+  .containertest {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    //padding: 30px;
+    position: relative;
+    
+    [class^="box-"] {
+      border-bottom: 8px solid var(--bg-color);
+      border-left: 4px solid var(--bg-color);
+      border-right: 4px solid var(--bg-color);
+      border-top: 8px solid var(--bg-color);
+      flex: 1;
+      height: 600px;
+      position: relative;
+      text-align: center;
+      transition: 200ms;
+      
+      &:first-child {
+        border-left: 8px solid var(--bg-color);
+      }
+      
+      &:last-child {
+        border-right: 8px solid var(--bg-color);
+      }
+      
+      &:hover {      
+        color: #fff;
+        cursor: pointer;
+        flex-grow: 4;
+        transition: 500ms; 
+        
+        a {
+          font-size: 1.5rem;
+        }
+      }
+      
+      .image {
+        bottom:0;
+        left:0;
+        position: absolute;
+        right:0;
+        top:0;
+        z-index: 1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 10px;
+      }
+    }
+
+    .link {
+      position: relative;
+      width: 100%;
+      z-index: 2;
+      background-color: $orangeO;
+      top: 80%;
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+    a {
+      position: relative;
+      width: 100%;
+      z-index: 2;
+      //background-color: $orangeO;
+      //display: inline-block;
+      color: white;
+      //padding: 1rem 0;
+      //top: 80%;
+    }
+  }
+
+
   .section-services {
     //background-color: $pearl;
   }
@@ -176,7 +252,6 @@
   .service {
     position: relative;
   }
-
 
   .services-list {
     //background-color: $pearl;
@@ -205,11 +280,9 @@
       border: none;
       padding: 0.3rem 1rem;
       border-radius: 5px;
-      font-family: "Abril Fatface", display;
-      //font-family: "Roboto",sans-serif;
+      font-family: "Dosis",sans-serif;
 
-      font-family: "Akshar", sans-serif;
-      font-size: 1.8rem;
+      font-size: 2rem;
       position: absolute;
       bottom: -15px;
       left: -15px;
@@ -326,6 +399,7 @@ section {
     aspect-ratio: 1 / 1 ;
     background-position: center;
     background-size: cover;
+    border-radius: 10px;
     //position: absolute;
   }
 

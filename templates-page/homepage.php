@@ -45,25 +45,14 @@ $sectionServices = get_field('servicestitle')
     </div>
   </div>
 
-
-
-  <!-- <section class="col-3 ss-style-invertedrounded">
-    <div class="column">
-    </div>
-    <div class="column">
-    </div>
-    <div class="column">
-    </div>
-  </section> -->
-
   <div class="section section-services">
     <div class="content">
       <h2 class="section-title"><?php echo $sectionServices ?></h2>
-      <div class="services-list">
+      <!-- <div class="services-list">
 
         <?php
 
-        for ($i = 1; $i < 7; $i++) : ?>
+        for ($i = 1; $i < 6; $i++) : ?>
 
           <?php $service = get_field('service_' . $i); ?>
 
@@ -73,18 +62,30 @@ $sectionServices = get_field('servicestitle')
           </div>
 
         <?php endfor ?>
+      </div> -->
 
+
+      <div class="containertest">
+
+        <?php for ($i = 1; $i < 6; $i++) : ?>
+
+        <?php $service = get_field('service_' . $i); ?>
+
+        <div class="box-<?php echo $i ?>">
+            <div class="overlay"></div>
+            <div class=" card image" style="background-image: url(<?php echo $service['image'] ?>);"></div>
+            <div class="link"><a class=""><?php echo $service['name'] ?></a></div>
+        </div>
+        <?php endfor ?>
+ 
       </div>
+
+      
+
+
 
 
     </div>
-
-
-<!--     <section class="col-2 color ss-style-roundedsplit">
-      <div class="column text">
-      </div>
-    </section> -->
-
   </div>
 
   <div class="section section-assets">
@@ -249,7 +250,7 @@ $sectionServices = get_field('servicestitle')
     <div class="content">
           <h2><?php echo $sectionContact['contactTitle'] ?></h2>
       <div class="section-blocks type2">
-        <!-- <div class="block servicesImgAnim image-block" style="background-image: url(<?php echo $sectionServices['servicesImg'] ?>);"></div> -->
+     
         <div class="block text-block">
           <h3><?php echo $sectionContact['contactTitle2'] ?></h3>
           <p><?php echo $sectionContact['contactText'] ?></p>

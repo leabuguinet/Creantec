@@ -40,7 +40,7 @@ body {
     justify-content: end;
     align-items: center;
     position: relative;
-    gap: 50px;
+    gap: 10px;
     z-index: 1000;
     width: 100%;
     padding-right: 50px;
@@ -63,8 +63,10 @@ body {
         font-family: 'Dosis', sans-serif;
         font-weight: 300;
         font-size: 1.2rem;
-        min-width: fit-content;
+        //min-width: fit-content;
+        min-width: 145px;
         transition: all ease 1s;
+        position: relative;
     }
 
     a {
@@ -77,5 +79,22 @@ body {
     .menu-item  a:hover{
         transform: translateY(-10px);
         color: $orange;
+    }
+
+    .sub-menu {
+        position: absolute;
+        top: 52px;
+
+        li {
+            background-color: orange;
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+
+        li a:hover {
+            transform: unset;
+            color: white;
+        }
     }
 }

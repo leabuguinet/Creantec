@@ -5,6 +5,16 @@ import homeAnim from "./home-anim";
 homeAnim.init();
 menuAnim.init();
 
+
+function init(e) {
+  if (!e.target.closest('.item')) return;
+  let hero = document.querySelector('div[data-pos="0"]');
+  let target = e.target.parentElement;
+  [target.dataset.pos,hero.dataset.pos] = [hero.dataset.pos,target.dataset.pos];
+}
+
+window.addEventListener('click',init,false);
+
 ///SWIPER
 var swiper = new Swiper('.swiper-container', {
   centeredSlides: true,
@@ -40,3 +50,5 @@ var swiper2 = new Swiper(".brandSwiper", {
     clickable: true,
   },
 });
+
+

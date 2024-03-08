@@ -28,8 +28,21 @@ const menuAnim = {
            //position: 'fixed',
            boxShadow: '0px 48px 100px 0px rgba(17, 12, 46, 0.15)',
         })
+        
+        let menuItem = document.querySelectorAll('.menu-item-has-children');
+        for(let i = 0; i < menuItem.length; i++){
+           menuItem[i].children[1]
 
-  }
+           menuItem[i].addEventListener('mouseenter', () => {
+                menuItem[i].children[1].classList.add('teeeest')
+           })
+
+           menuItem[i].addEventListener('mouseleave', () => {
+            menuItem[i].children[1].classList.remove('teeeest')
+       })
+        }
+
+    }
 }
 
 export default menuAnim;

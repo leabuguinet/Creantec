@@ -29,6 +29,9 @@ footer {
         justify-content: space-between;
         padding: 10rem 2rem 2rem ;
 
+        @include max($bp-tablet-px){
+            flex-direction: column;
+        }
 
         //col-left
 
@@ -57,6 +60,9 @@ footer {
             .links {
                 display: flex;
                 gap: 50px;
+                @include max($bp-tablet-px){
+                    flex-direction: column;
+                }
             }
     
             ul li {
@@ -88,6 +94,9 @@ footer {
             img{
                 width: 200px;
                 margin-bottom: 1rem;
+                @include max($bp-tablet-px){
+                    margin-top: 3rem;
+                }
             }
         }
 

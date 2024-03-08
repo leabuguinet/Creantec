@@ -6,6 +6,8 @@
         padding: 0 2rem;
     }
 
+
+  
     section {
         margin-bottom: 5rem;
     }
@@ -71,8 +73,8 @@
         content: "";
         position: absolute;
         border-radius: 10px;
-        width: 180px;
-        height: 180px;
+        width: 130px;
+        height: 130px;
         background-color: $orangebis;
         right: 114px;
         top: 222px;
@@ -115,13 +117,23 @@
     }
 
     .savoirfaire-title {
+      text-align: center;
       width: 30%;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
     }
 
     .savoirfaire-description {
       width: 50%;
       border-left: 4px $orange solid;
       padding-left: 2rem;
+
+      p:first-of-type {
+        margin-bottom: 1.5rem;
+      }
     }
 
     //SECTION NOTRE HISTOIRE
@@ -238,6 +250,23 @@
         }
     }
 
+
+    .tocontact {
+      display: flex;
+      width: 300px;
+      margin: 0 auto;
+      justify-content: center;
+      text-decoration: none;
+      padding: 1rem 1.8rem;
+      border: none;
+      border-radius: 50px 50px 50px 50px;
+      box-shadow: 0px 0px 40px 0px rgba(0,0,0,.18);
+      background-color: $orange;
+      color: $darkgrey;
+      font-size: 2rem;
+      font-family: "Abril Fatface",display;
+      cursor: pointer;
+    }
 
     .section-divider::before,
     .section-divider::after {

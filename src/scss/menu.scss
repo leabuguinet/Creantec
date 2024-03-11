@@ -6,6 +6,9 @@ body {
     --main-bg-color: rgba(255, 255, 255, 0.915);
 }
 
+header {
+    position: relative;
+}
 
 .menu-menu-main-container {
    
@@ -14,7 +17,7 @@ body {
     z-index: 1000;
     width: 100%;
     transition: all ease 2s;
-    padding-top: 20px;
+    //padding-top: 20px;
 
     &::after {
         content: "";
@@ -51,6 +54,7 @@ body {
         width: 100%;
         display: flex;
         margin-left: 2rem;
+        padding: unset !important;
     }
     .home-link img{
         width: 180px;
@@ -60,6 +64,7 @@ body {
 
     li {
         list-style: none;
+        padding: 1rem;
         font-family: 'Dosis', sans-serif;
         font-weight: 300;
         font-size: 1.2rem;
@@ -82,9 +87,11 @@ body {
     }
 
     .sub-menu {
+        //display: none;
         position: absolute;
         top: 52px;
 
+        
         li {
             background-color: orange;
             padding: 8px;
@@ -97,4 +104,15 @@ body {
             color: white;
         }
     }
+}
+
+.sub-menu .menu-item {
+    opacity: 0;
+}
+.submenu-open {
+    display: block !important;
+}
+
+.bmenu {
+    position: absolute;
 }

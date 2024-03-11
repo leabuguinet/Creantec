@@ -21,26 +21,41 @@ const menuAnim = {
             }
         });
         
-        tl
-        .to(".menu-menu-main-container", {
-           //opacity: 0,
-           //'--main-bg-color': "blue",
-           //position: 'fixed',
-           boxShadow: '0px 48px 100px 0px rgba(17, 12, 46, 0.15)',
-        })
         
-        let menuItem = document.querySelectorAll('.menu-item-has-children');
-        for(let i = 0; i < menuItem.length; i++){
-           menuItem[i].children[1]
+/*         let menuOpen = false;
+        
+        const tl2 = gsap.timeline({
+          paused: true,
+          defaults: { duration: 0.3, ease: "power1.inOut" }
+        });
+        
+        tl2
+          .fromTo(
+            ".sub-menu .menu-item",
+            { opacity: 0, y: "5em", stagger: 0.2 },
+            { opacity: 1, y: "0em", stagger: 0.2 }
+          );
+        
+        document.querySelector(".menu-item-has-children").addEventListener("mouseenter", () => {
+          if (!menuOpen) {
+            tl2.play();
+            menuOpen = true;
+          } else {
+            tl2.reverse();
+            menuOpen = false;
+          }
+        });
 
-           menuItem[i].addEventListener('mouseenter', () => {
-                menuItem[i].children[1].classList.add('teeeest')
-           })
-
-           menuItem[i].addEventListener('mouseleave', () => {
-            menuItem[i].children[1].classList.remove('teeeest')
-       })
-        }
+        document.querySelector(".menu-item-has-children").addEventListener("mouseleave", () => {
+            if (!menuOpen) {
+              tl2.play();
+              menuOpen = true;
+            } else {
+              tl2.reverse();
+              menuOpen = false;
+            }
+          }); */
+        
 
     }
 }

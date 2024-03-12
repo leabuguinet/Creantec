@@ -52,16 +52,16 @@ setTimeout(() => {
 }); */
 
 
-
 let accordionItem = document.querySelectorAll('.accordion-item');
+let arrows = document.querySelectorAll('.accordion-link');
 let accordionAnswer = document.querySelectorAll('.answer');
 console.log(accordionItem)
 for (let a = 0; a < accordionItem.length; a++) {
   
   accordionItem[a].addEventListener('click', () => {
   
-    accordionAnswer[a].classList.toggle("accordion-open")
-
+    accordionAnswer[a].classList.toggle("accordion-open");
+    arrows[a].classList.toggle("active")
 
   })
   

@@ -48,12 +48,6 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
 
     <div class="section-divider col-3 ss-style-invertedrounded">
-        <div class="column">
-        </div>
-        <div class="column">
-        </div>
-        <div class="column">
-        </div>
     </div>
 
     <div class="section-savoirfaire">
@@ -69,8 +63,8 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
                                 <h3>Création & Design</h3>
                             </div>
-                            <i class="icon ion-md-arrow-forward"></i>
-                            <i class="icon ion-md-arrow-down"></i>
+
+                            <span class=" arrow"></span>
                         </div>
                         <div class="answer">
                             <p>Nos designers diplômés exercent l’art du style, la recherche de la forme parfaite. Leurs objectifs est de vous proposer un design attirant, économiquement réalisable, et différenciant.</p>
@@ -85,8 +79,7 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
                                 <h3>Conception & Innovation</h3>
                             </div>
-                            <i class="icon ion-md-arrow-forward"></i>
-                            <i class="icon ion-md-arrow-down"></i>
+                            <span class=" arrow"></span>
                         </div>
                         <div class="answer">
                             <p>Nos ingénieurs ont pour missions d’étudier les modes de conceptions, de fabrications, d’assemblages,tout en recherchant le meilleur coût. Ils travaillent également sur les dernières technologies, objets connectés, robotique, électronique embarquée, etc.</p>
@@ -101,8 +94,7 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
                                 <h3>Polyvalence</h3>
                             </div>
-                            <i class="icon ion-md-arrow-forward"></i>
-                            <i class="icon ion-md-arrow-down"></i>
+                            <span class=" arrow"></span>
                         </div>
                         <div class="answer">
                             <h4>Lumière</h4>
@@ -121,8 +113,7 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
                                 <h3>Qualité</h3>
                             </div>
-                            <i class="icon ion-md-arrow-forward"></i>
-                            <i class="icon ion-md-arrow-down"></i>
+                            <span class=" arrow"></span>
                         </div>
                         <div class="answer">
                             <h4>Certification, conformité, normes</h4>
@@ -141,8 +132,7 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
                                 <h3>Logistique</h3>
                             </div>
-                            <i class="icon ion-md-arrow-forward"></i>
-                            <i class="icon ion-md-arrow-down"></i>
+                            <span class=" arrow"></span>
                         </div>
                         <div class="answer">
                             <h4>Transport</h4>
@@ -157,15 +147,20 @@ $p1img = get_field('aboutus_paragraph_1_img');
                     </div>
 
                 </div>
+
+                
             </section>
+
+            
         </div>
+
+        <div class="section-divider col-3 ss-style-invertedrounded ss-style-invertedrounded-reverse">
+
+    </div>
     </div>
 
-    
-    <div class="section-divider col-2 color ss-style-roundedsplit">
-        <div class="column text">
-        </div>
-    </div>
+
+
 
     <div class="content">
 

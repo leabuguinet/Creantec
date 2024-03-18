@@ -37,6 +37,10 @@ function add_type_to_script($tag, $handle, $source){
 add_action( 'wp_enqueue_scripts', 'theme_register_assets', 20 );
 
 
+function register_my_menu() {
+    register_nav_menu( 'main-menu','Menu principal', 'text-domain');
+}
+add_action( 'after_setup_theme', 'register_my_menu' );
 
 
 // FOOTER MENU
@@ -79,5 +83,4 @@ function add_new_menu_item( $nav, $args ) {
     $nav = $newmenuitem.$nav;
     return $nav;
 };
-
 

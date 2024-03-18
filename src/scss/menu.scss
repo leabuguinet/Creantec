@@ -70,7 +70,7 @@ header {
         font-size: 1.2rem;
         //min-width: fit-content;
         min-width: 145px;
-        transition: all ease 1s;
+        //transition: all ease 1s;
         position: relative;
     }
 
@@ -86,6 +86,10 @@ header {
         color: $orange;
     }
 
+    .current-menu-item a {
+        color: $orange;
+    }
+
     .sub-menu {
         //display: none;
         position: absolute;
@@ -97,6 +101,10 @@ header {
             padding: 8px;
             border-radius: 10px;
             margin-bottom: 5px;
+        }
+
+        a {
+            transition: all ease 0.2s;
         }
 
         li a:hover {
@@ -116,3 +124,121 @@ header {
 .bmenu {
     position: absolute;
 }
+
+$animation-speed: 0.5s;
+
+
+///MOBILE 
+/// 
+
+.menu-menu-main-container-mobile {
+    display: none;
+    background-color: var(--main-bg-color);
+    /* flex-direction: row;
+    justify-content: center !important;
+    align-items: center; */
+    padding: 0.5rem 1rem;
+
+    .top-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+        align-items: center;
+    }
+    .menu-item {
+        display: none;
+    }
+
+    .home-link {
+        //margin: 0;
+        display: none;
+    }
+
+    .custom-logo-link {
+        //width: 100%;
+        display: flex;
+        margin-left: 2rem;
+        padding: unset !important;
+
+        img { width: 180px;
+        height: 50px;
+        object-fit: contain;
+        }
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@include max($bp-tablet-px){
+    .menu-menu-main-container {
+        display: none;
+    }
+
+    .menu-menu-main-container-mobile {
+        display: block;
+        height: 65px;
+    }
+}
+
+
+.menu-menu-main-container-mobile.mobilemenu-open {
+    .menu-item, .menu {
+        display: block;
+    }
+
+    .sub-menu .menu-item {
+        opacity: 1;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.mobile-menu-button {
+	transition: transform $animation-speed;
+    margin-right: 2rem;
+
+	.line-1 {
+		border-top: 3px solid #000;
+		display: block;
+		transition: margin $animation-speed, transform $animation-speed;
+		width: 30px;
+	}
+	
+	.line-2 {
+		@extend .line-1;
+		margin: 7px 0;
+	}
+	
+	.line-3 {
+		@extend .line-1;
+	}
+	
+	&.toggle {
+		padding: 25px 0;
+        transform: rotate(180deg);
+		
+		.line-1 {
+			transform: rotate(45deg);
+		}
+
+		.line-2 {
+			margin: -3px 0;
+			opacity: 0;
+		}
+
+		.line-3 {
+			transform: rotate(-45deg);
+		}
+
+	}
+	
+}
+
+
+
+///

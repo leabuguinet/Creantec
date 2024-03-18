@@ -6,57 +6,82 @@ import { ScrollTrigger } from "gsap/all";
 const menuAnim = {
 
     init () {
-        /* Animation of Who are we section blocks */
-        var tl = gsap.timeline({
-            scrollTrigger: {
-            trigger: ".swiper-container",
+
+      
+        let menuItemWithChildren = document.querySelectorAll('.menu-item-has-children');
+
+        if(menuItemWithChildren){
+
+          var tlmenu = gsap.timeline({
+            paused: true
+          }); 
+
+          tlmenu.fromTo(".sub-menu .menu-item", {
+            y: -50,
+            duration: 2.2
+          },
+          {
+            opacity: 1,
+            duration: 0.5,
+            y: 0,
+          })
+
+          for(let p = 0; p < menuItemWithChildren.length; p++){
             
-            start: "bottom top",
-            endTrigger: 'body',
-            end: "bottom bottom+10" ,   
-            scrub: false,
-            markers: false, 
-            //pin: true,
-            toggleClass: {targets: ".menu-menu-main-container", className: "menu-fixed"}
-            }
-        });
-        
-        
-/*         let menuOpen = false;
-        
-        const tl2 = gsap.timeline({
-          paused: true,
-          defaults: { duration: 0.3, ease: "power1.inOut" }
-        });
-        
-        tl2
-          .fromTo(
-            ".sub-menu .menu-item",
-            { opacity: 0, y: "5em", stagger: 0.2 },
-            { opacity: 1, y: "0em", stagger: 0.2 }
-          );
-        
-        document.querySelector(".menu-item-has-children").addEventListener("mouseenter", () => {
-          if (!menuOpen) {
-            tl2.play();
-            menuOpen = true;
-          } else {
-            tl2.reverse();
-            menuOpen = false;
+            menuItemWithChildren[p].addEventListener('mouseenter', () => {
+              menuItemWithChildren[p].classList.add('TEST');
+              tlmenu.play();
+            })
+
+            menuItemWithChildren[p].addEventListener('mouseleave', () => {
+              menuItemWithChildren[p].classList.remove('TEST');
+              tlmenu.reverse();
+            })
+            
           }
+
+
+
+        }
+
+        /* Animation of the mobile menu */
+
+    
+        let mobileMenu = document.querySelector(".mobile-menu-button");
+        let mobileMenuLink = document.querySelector(".menu-menu-main-container-mobile");
+
+        /* mobileMenu.addEventListener('click', () => {
+          mobileMenu.classList.toggle('toggle')
+        }) */
+
+
+
+        var tlmenumobile= gsap.timeline({
+          paused: true
         });
+     
+        tlmenumobile.to(".menu-menu-main-container-mobile", {
+          opacity: 0.8,
+          height: '100vh',
+          
+        });
+      
+          mobileMenu.addEventListener('click', () => {
+          
+            mobileMenu.classList.toggle('toggle');
+            mobileMenuLink.classList.toggle('mobilemenu-open');
 
-        document.querySelector(".menu-item-has-children").addEventListener("mouseleave", () => {
-            if (!menuOpen) {
-              tl2.play();
-              menuOpen = true;
+            if(mobileMenu && mobileMenu.classList.contains('toggle') === false) {
+
+              tlmenumobile.reverse();
+
             } else {
-              tl2.reverse();
-              menuOpen = false;
+              tlmenumobile.play();
             }
-          }); */
-        
 
+
+          })
+        
     }
 }
 

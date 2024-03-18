@@ -12,31 +12,42 @@
 
     <header id="header">
 
-    
-        <?php
- 
-
-
-        wp_nav_menu(); 
         
-        ?>
- 
-        <div class="bmenu">
-            
-        </div>
-
-<!--         <nav role="navigation" aria-label="<?php esc_html_e( 'Menu principal', 'text-domain' ); ?>">
-            <button type="button" aria-expanded="false" aria-controls="primary-menu" class="menu-toggle">
-                <?php esc_html_e( 'Menu', 'text-domain' ); ?>
-            </button>
-            <?php
+       <nav class="menu-menu-main-container" role="navigation" aria-label="<?php _e('Menu principal', 'text-domain'); ?>">
+        <?php
             wp_nav_menu([
                 'theme_location' => 'main-menu',
-                'container'      => false,
-                'menu_id'        => 'primary-menu',
+                'container'      => false, // On retire le conteneur généré par WP
             ]);
+        ?>
+        </nav>
+
+
+        <nav class="menu-menu-main-container-mobile" role="navigation" aria-label="<?php _e('Menu principal', 'text-domain'); ?>">
+            
+            <div class="top-bar">
+                <?php 	the_custom_logo(); ?>
+                <span class="mobile-menu-button">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </span>
+
+            </div>
+
+
+            
+            <?php
+                wp_nav_menu([
+                    'theme_location' => 'main-menu',
+                    'container'      => false,
+                ]);
             ?>
-        </nav> -->
+        </nav>
+
+            
+
+
     </header>
 
 

@@ -12,15 +12,20 @@ $yellow: #fcbe32;
 $pearl: #F6F0E4;
 $darkgrey: #282f35;
 
-h1, h2 {
-    //font-family: 'Abril Fatface', display;
+h1, h2, h3 {
     font-family: 'Playfair Display', display;
+}
+
+h1 {
     font-weight: 700;
     font-size: clampRem(35, 70, $bp-mobile, $bp-regular);
 }
 
+h2 {
+    font-size: clampRem(30, 60, $bp-mobile, $bp-regular);
+}
+
 h3 {
-    font-family: 'Playfair Display', display;
     font-size: clampRem(25, 35, $bp-mobile, $bp-regular);
 }
 

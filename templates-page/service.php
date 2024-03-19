@@ -4,10 +4,11 @@
 get_header();
 global $post;
 
-$p1 = get_field('aboutus_paragraph_1');
-$p2 = get_field('aboutus_paragraph_2');
-$p1img = get_field('aboutus_paragraph_1_img');
-
+$serviceTitle = get_field('service_description')['service_title'];
+$serviceText = get_field('service_description')['service_text'];
+$serviceImg = get_field('service_description')['service_img'];
+$gallery = get_field('gallery');
+$gallerySubtitle = get_field('gallery_subtitle')
 ?>
 
 <main class="service-page">
@@ -17,24 +18,46 @@ $p1img = get_field('aboutus_paragraph_1_img');
         <h1>Artisanat du luxe</h1>
 
         <div class="service-description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nihil sed explicabo aliquid dolore aperiam aspernatur architecto distinctio voluptates ipsum id reprehenderit labore magnam ut sint voluptatibus voluptatum, maxime est.</p>
+
+            <div class="service-text">
+                <h2><?php echo $serviceTitle ?></h2>
+            <p><?php echo $serviceText ?></p>           
+            </div>
+
+            <div class="service-img">
+                <img src="<?php echo $serviceImg ?>" alt="">
+            </div>
             
-            <!-- <img src="#" /> -->
-            
+
         </div>
 
-        <h2>Nos réalisations</h2>
+</div>
+        <div class="section-divider col-3 ss-style-invertedrounded"></div>
 
-       <!--  <div class="gallery">
+        <div class="section-gallery">
+            <div class="content">
 
-            <div class='item' data-pos='0'><img src='https://source.unsplash.com/qvEI30ydO_w'></div>
-            <div class='item' data-pos='1'><img src='https://source.unsplash.com/9KDuSi7dJv4'></div>
-            <div class='item' data-pos='2'><img src='https://source.unsplash.com/d5PYB17O9jE'></div>
-            <div class='item' data-pos='3'><img src='https://source.unsplash.com/Um9AkOiIDcU'></div>
-            <div class='item' data-pos='4'><img src='https://source.unsplash.com/YTk8tO3PGdA'></div>
+                <h2>Nos réalisations</h2>
+                <h3><?php echo $gallerySubtitle ?></h3>
+
+            <div class="gallery">
+
+                <?php
+                for ($i=1; $i <= count($gallery) ; $i++) { 
+                
+                ?>
+
+                <div class="gallery-item">
+                <img src="<?php echo $gallery["image_{$i}"]?>" alt="">
+                <span class="title">Lorem ipsum dolor</span>
+                <span class="text">Morbi diam viverra mattis sociis magna, habitasse penatibus non lectus</span>
+                </div>
+
+                <?php } ?>
+
+            
+            </div>
         </div>
- -->
-
 
 
     </div>

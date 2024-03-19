@@ -21,3 +21,78 @@
 
 
 @import url(https://fonts.bunny.net/css?family=dosis:400,600);
+
+
+
+.section-divider::before,
+.section-divider::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.section-divider {
+  position: relative;
+
+  background: #ffffff;
+  color: #fff;
+  text-align: center;
+}
+
+.ss-style-invertedrounded {
+  margin-bottom: 90px;
+  padding: 3em 10%;
+  border-radius: 0 0 0 90px;
+}
+
+.ss-style-invertedrounded.ss-style-invertedrounded-reverse  {
+  margin-bottom: 90px;
+  padding: 3em 10%;
+  border-radius: 0 90px 0 0;
+}
+
+.ss-style-invertedrounded-reverse {
+
+  &::before {
+    display: none;
+  } 
+}
+
+.ss-style-invertedrounded::before,
+.ss-style-invertedrounded::after {
+  left: 0;
+  z-index: -1;
+  height: 90px;
+  background: $pearl;
+}
+
+.ss-style-invertedrounded::before {
+  top: 100%;
+  width: 100%;
+  border-radius: 0 90px 0 0;
+}
+
+.ss-style-invertedrounded::after {
+  bottom: 0;
+  z-index: -1;
+  width: 50%;
+}
+
+.col-3 .column {
+  padding: 0 1%;
+  width: 33%;
+  text-align: center;
+}
+
+.col-3 .column p {
+  padding: 1.4em;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.section-savoirfaire {
+  background-color: $pearl;
+}

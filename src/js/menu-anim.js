@@ -18,11 +18,13 @@ const menuAnim = {
 
           tlmenu.fromTo(".sub-menu .menu-item", {
             y: -50,
-            duration: 2.2
+            duration: 2.2,
+            stagger: 0.1,
           },
           {
             opacity: 1,
             duration: 0.5,
+            stagger: 0.1,
             y: 0,
           })
 

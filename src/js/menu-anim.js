@@ -4,10 +4,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 const menuAnim = {
-
+  
     init () {
 
-      
         let menuItemWithChildren = document.querySelectorAll('.menu-item-has-children');
 
         if(menuItemWithChildren){

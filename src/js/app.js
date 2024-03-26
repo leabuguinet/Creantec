@@ -1,14 +1,19 @@
 
 import menuAnim from "./menu-anim";
 import homeAnim from "./home-anim";
-import aboutus from "./aboutus";
-import arrowMenuCentered from "./arrowMenuCentered";
+import aboutusAnim from "./aboutus";
 
 let homepage = document.querySelector('#homepage');
-if(homepage){
-  homeAnim.init();
-}
+let aboutuspage = document.querySelector("#aboutus");
+
 
 menuAnim.init();
 
 
+if(homepage){
+  homeAnim.init();
+}
+
+if (aboutuspage) {
+  aboutusAnim.init();
+}

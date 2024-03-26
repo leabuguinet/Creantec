@@ -7,6 +7,8 @@ const menuAnim = {
   
     init () {
 
+      /* Animation of the desktop menu */
+
         let menuItemWithChildren = document.querySelectorAll('.menu-item-has-children');
 
         if(menuItemWithChildren){
@@ -15,13 +17,15 @@ const menuAnim = {
             paused: true
           }); 
 
-          tlmenu.fromTo(".sub-menu .menu-item", {
+          tlmenu.fromTo(".menu-menu-main-container .sub-menu .menu-item", {
             y: -50,
+            visibility: "hidden",
             duration: 2.2,
             stagger: 0.1,
           },
           {
             opacity: 1,
+            visibility: 'visible',
             duration: 0.5,
             stagger: 0.1,
             y: 0,
@@ -30,12 +34,10 @@ const menuAnim = {
           for(let p = 0; p < menuItemWithChildren.length; p++){
             
             menuItemWithChildren[p].addEventListener('mouseenter', () => {
-              menuItemWithChildren[p].classList.add('TEST');
               tlmenu.play();
             })
 
             menuItemWithChildren[p].addEventListener('mouseleave', () => {
-              menuItemWithChildren[p].classList.remove('TEST');
               tlmenu.reverse();
             })
             
@@ -47,25 +49,25 @@ const menuAnim = {
 
         /* Animation of the mobile menu */
 
-    
-        let mobileMenu = document.querySelector(".mobile-menu-button");
+        let mobileMenu = document.querySelector(".burger-menu");
         let mobileMenuLink = document.querySelector(".menu-menu-main-container-mobile");
 
-        /* mobileMenu.addEventListener('click', () => {
-          mobileMenu.classList.toggle('toggle')
-        }) */
-
-
-
-        var tlmenumobile= gsap.timeline({
+        var tlmenumobileContainer = gsap.timeline({
           paused: true
-        });
-     
-        tlmenumobile.to(".menu-menu-main-container-mobile", {
-          opacity: 0.8,
+        })
+
+        tlmenumobileContainer.to('.menu-menu-main-container-mobile .menu',{
+          display: 'block'
+        })
+        .to(".menu-menu-main-container-mobile", {
           height: '100vh',
-          
-        });
+        })
+        .fromTo('.menu-menu-main-container-mobile .menu .menu-item',{
+          opacity: 0, 
+        }, {
+          opacity: 1,
+          stagger: 0.2
+        })
       
           mobileMenu.addEventListener('click', () => {
           
@@ -74,11 +76,13 @@ const menuAnim = {
 
             if(mobileMenu && mobileMenu.classList.contains('toggle') === false) {
 
-              tlmenumobile.reverse();
+              tlmenumobileContainer.timeScale(2).reverse();
 
             } else {
-              tlmenumobile.play();
+
+              tlmenumobileContainer.timeScale(1).play();
             }
+
 
 
           })

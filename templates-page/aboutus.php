@@ -7,12 +7,13 @@ global $post;
 $p1 = get_field('aboutus_paragraph_1');
 $p2 = get_field('aboutus_paragraph_2');
 $p1img = get_field('aboutus_paragraph_1_img');
+$sectionContact = get_field('contact_section');
 
 ?>
 
 <main class="" id="aboutus">
 
-    <div class="content aboutus-before">
+    <section class="content section-beforeall">
 
         <div>
 
@@ -40,27 +41,21 @@ $p1img = get_field('aboutus_paragraph_1_img');
             <div class="square2"></div>
         </div>
 
-    </div>
-
-
-
-
-
+    </section>
 
     <div class="section-divider col-3 ss-style-invertedrounded">
     </div>
 
-    <div class="section-savoirfaire">
+    <section class="section-savoirfaire">
         <div class="content">
             <h2>Nos savoir-faire</h2>
-            <section class="savoirfaire-content">
+            <div class="savoirfaire-content">
 
 
                 <div class="accordion">
                     <div class="accordion-item" id="question1">
                         <div class="accordion-link">
                             <div class="flex">
-
                                 <h3>Création & Design</h3>
                             </div>
 
@@ -148,21 +143,19 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
                 </div>
 
-                
-            </section>
 
-            
+            </div>
+
+
         </div>
 
-        <div class="section-divider col-3 ss-style-invertedrounded ss-style-invertedrounded-reverse">
-
-    </div>
-    </div>
+        <div class="section-divider col-3 ss-style-invertedrounded ss-style-invertedrounded-reverse"></div>
+    </section>
 
 
 
 
-    <div class="content">
+    <section class="section-background content">
 
 
         <h2>Notre histoire</h2>
@@ -197,14 +190,22 @@ $p1img = get_field('aboutus_paragraph_1_img');
 
         </section>
 
-    </div>
+    </section>
 
-    <div class="content">
+    <section class="section-contact content">
 
-        <h2>Une question ?</h2>
+        <h2>Une question&nbsp?</h2>
 
-        <a href='#' class="tocontact">Contactez-nous</a>
-    </div>
+        <div class="section-blocks type2">
+
+            <div class="block text-block">
+                <h3><?php echo $sectionContact['contact_title'] ?></h3>
+                <p><?php echo $sectionContact['contact_text'] ?></p>
+                <button>Contactez-nous</button>
+            </div>
+
+        </div>
+    </section>
 
 </main>
 

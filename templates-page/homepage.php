@@ -7,7 +7,7 @@ global $post;
 $slider = get_field('slider');
 
 $sectionWhoarewe = get_field('whoareweSection');
-$sectionContact = get_field('contactSection');
+$sectionContact = get_field('contact_section');
 $sectionAssets = get_field('assetsSection');
 $sectionRefs = get_field('refsSection');
 $sectionProjects = get_field('projectsSection');
@@ -241,19 +241,14 @@ $sectionServices = get_field('servicestitle')
 
   </div>
 
-
-
-
-
-
   <div class="section section-contact">
     <div class="content">
-          <h2><?php echo $sectionContact['contactTitle'] ?></h2>
+          <h2><?php echo $sectionContact['contact_title'] ?></h2>
       <div class="section-blocks type2">
      
         <div class="block text-block">
-          <h3><?php echo $sectionContact['contactTitle2'] ?></h3>
-          <p><?php echo $sectionContact['contactText'] ?></p>
+          <h3><?php echo $sectionContact['contact_title2'] ?></h3>
+          <p><?php echo $sectionContact['contact_text'] ?></p>
           <button>Contactez-nous</button>
         </div>
       </div>

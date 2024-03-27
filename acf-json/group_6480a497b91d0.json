@@ -1,6 +1,6 @@
 {
     "key": "group_6480a497b91d0",
-    "title": "homepage",
+    "title": "Accueil",
     "fields": [
         {
             "key": "field_6486f3f5fdd5c",
@@ -807,84 +807,6 @@
             ]
         },
         {
-            "key": "field_6490770dffd06",
-            "label": "Section Contact",
-            "name": "contactSection",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "row",
-            "sub_fields": [
-                {
-                    "key": "field_64907744ffd08",
-                    "label": "Titre",
-                    "name": "contactTitle",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64a2981a7bc30",
-                    "label": "Titre secondaire",
-                    "name": "contactTitle2",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_64907754ffd09",
-                    "label": "Texte",
-                    "name": "contactText",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                }
-            ]
-        },
-        {
             "key": "field_65a7fd4b681ab",
             "label": "Section Projets",
             "name": "projectsSection",
@@ -1046,5 +968,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708551654
+    "modified": 1711473359
 }

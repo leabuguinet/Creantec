@@ -79,13 +79,8 @@ $sectionContact = get_field('contact_section');
 
             <?php } ?>
 
-
         </div>
-
-
-
     </div>
-
 
     <div class="section-contact">
 
@@ -99,6 +94,7 @@ $sectionContact = get_field('contact_section');
                     <p><?php echo $sectionContact['contact_text'] ?></p>
                     <button>Contactez-nous</button>
                 </div>
+                
             </div>
         </div>
 

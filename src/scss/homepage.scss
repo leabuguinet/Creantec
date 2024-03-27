@@ -203,14 +203,27 @@
       transition: 200ms;
       position: relative;
 
+      a {
+        font-size: clampRem(25, 22, $bp-mobile, $bp-regular);
+        transition: all ease-in-out 500ms;
+
+        @include max($bp-tablet-px){
+          font-size: toRem(28)
+        }
+      }
+
       &:hover {      
         color: #fff;
         cursor: pointer;
         flex-grow: 4;
-        transition: 500ms; 
+        transition: all ease-in-out 500ms;
         
         a {
-          font-size: 1.5rem;
+          font-size: clampRem(17, 24, $bp-mobile, $bp-regular);
+
+          @include max($bp-tablet-px){
+            font-size: toRem(30)
+          }
         }
       }
 
@@ -264,7 +277,7 @@
 
 
   .section-services {
-    //background-color: $pearl;
+
   }
 
   .service {
@@ -272,7 +285,6 @@
   }
 
   .services-list {
-    //background-color: $pearl;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -321,7 +333,7 @@
     }
   }
 
-  section::before,
+section::before,
 section::after {
   position: absolute;
   content: "";

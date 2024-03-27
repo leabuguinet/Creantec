@@ -22,13 +22,16 @@ h1 {
 }
 
 h2 {
-    font-size: clampRem(30, 60, $bp-mobile, $bp-regular);
+    font-size: clampRem(28, 60, $bp-mobile, $bp-regular);
 }
 
 h3 {
     font-size: clampRem(25, 35, $bp-mobile, $bp-regular);
 }
 
+p {
+    font-size: clampRem(16, 20, $bp-mobile, $bp-regular);
+}
 *, html, body {
     margin: 0;
     padding: 0;
@@ -46,7 +49,7 @@ body {
     flex-direction: column;
     position: relative;
     font-family: 'Dosis', sans-serif;
-    font-size: 1.3rem;
+    //font-size: 1.3rem;
     scrollbar-gutter: auto;
     scroll-behavior: smooth;
     color: $darkgrey;
